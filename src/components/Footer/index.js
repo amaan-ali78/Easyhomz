@@ -1,4 +1,4 @@
-import style from "./footer.module.css";
+import style from "./footer.module.scss";
 import { NAV_ROUTE_LINKS } from "../../utils/data";
 import { Link } from "react-router-dom";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
