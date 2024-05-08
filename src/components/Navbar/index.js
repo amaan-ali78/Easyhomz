@@ -4,6 +4,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Link, NavLink } from 'react-router-dom';
 import { NAV_ROUTE_LINKS } from '../../utils/data';
 import style from './navbar.module.scss'; // Import your SCSS file
+import NestedMenu from '../NestedMenu';
+import {  ButtonToolbar } from 'rsuite';
 
 const Navbar = () => {
   const handleClick = () => {
@@ -32,7 +34,7 @@ const Navbar = () => {
               activeClassName={style.activeLink}
               to={val.to}
             >
-              <div>{val.text}</div>
+              {(val.havingNestedRoute)? <NestedMenu nestedLink={val.nestedLinks}/> : <div>{val.text}</div>}
             </NavLink>
           ))}
         </div>
@@ -50,7 +52,7 @@ const Navbar = () => {
 
         {NAV_ROUTE_LINKS.map((val) => (
           <Link key={val.to} to={val.to}>
-            <div className={style.sideItems}>{val.text}</div>
+            <div className={style.sideItems}><div>{(val.havingNestedRoute)? <NestedMenu nestedLink={val.nestedLinks}/> : <>{val.text}</>}</div></div>
           </Link>
         ))}
       </div>

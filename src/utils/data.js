@@ -17,13 +17,13 @@ export const NAV_ROUTE_LINKS = [
         to:ROUTES.DESIGN_IDEAS,
         nestedLinks:[
             {
-                text:'Kitchn Ideas',
+                text:'Kitchen Ideas',
                 to:ROUTES.BEDROOM_IDEAS,
                 nestedLinks:[],
                 havingNestedRoute:false
             },
             {
-                text:'Bedrrom Ideas',
+                text:'Bedroom Ideas',
                 to:ROUTES.DASHBOARD,
                 nestedLinks:[],
                 havingNestedRoute:false
